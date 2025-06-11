@@ -48,7 +48,7 @@
         "panZoomEnabled": true,
         "panelConfig": "https://raw.githubusercontent.com/laquiante/telemetry/refs/heads/main/configs/grafana/flow_panels/box.yml",
         "siteConfig": "zoomPanPinch:\n  # This optional term defines the array of keys that can be used to enable wheel zoom. There's\n  # a clash of interest between panel zoom and dashboard scrolling which is easy to avoid with small\n  # SVGs, but becomes more problematic when the SVG is large and covers a lot of the screen. By\n  # requiring a combo such as ALT+Scroll this clash can be avoided.\n  wheelActivationKeys: [\"Alt\"]",
-        "svg": "https://raw.githubusercontent.com/laquiante/telemetry/refs/heads/main/configs/grafana/flow_panels/alq-reengineering-11-JUN-Network%20Topology.drawio.svg",
+        "svg": "https://raw.githubusercontent.com/laquiante/telemetry/refs/heads/main/configs/grafana/flow_panels/alq-reengineering-11-JUN-b.drawio",
         "testDataEnabled": true,
         "timeSliderEnabled": true,
         "timeSliderMode": "local"
