@@ -26,7 +26,7 @@ anchors:
       - valueMin: 200000
 cellIdPreamble: cell-
 cells:
-  node1_IF1:
+  node1:e1-1:
     dataRef: oper-state:node1:e1-1
     fillColor:
       thresholds: *thresholds-operstate
