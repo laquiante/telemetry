@@ -1,0 +1,190 @@
+---
+anchors:
+  thresholds-operstate: &thresholds-operstate
+  - color: red
+    level: 0
+  - color: green
+    level: 1
+  thresholds-traffic: &thresholds-traffic
+  - color: gray
+    level: 0
+  - color: green
+    level: 199999
+  - color: yellow
+    level: 500000
+  - color: orange
+    level: 1000000
+  - color: red
+    level: 5000000
+  label-config: &label-config
+    separator: replace
+    units: bps
+    decimalPoints: 1
+    valueMappings:
+    - valueMax: 199999
+      text: ​
+    - valueMin: 200000
+cellIdPreamble: cell-
+cells:
+  extern:e1-1:host-01:eth1:
+    dataRef: oper-state:extern:e1-1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:extern:e1-1:host-01:eth1:
+    dataRef: extern:e1-1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  extern:e1-2:host-02:eth1:
+    dataRef: oper-state:extern:e1-2
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:extern:e1-2:host-02:eth1:
+    dataRef: extern:e1-2:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  extern:e1-32:border:e1-32:
+    dataRef: oper-state:extern:e1-32
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:extern:e1-32:border:e1-32:
+    dataRef: extern:e1-32:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  border:e1-32:extern:e1-32:
+    dataRef: oper-state:border:e1-32
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:border:e1-32:extern:e1-32:
+    dataRef: border:e1-32:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  border:e1-11:firewall:e1-11:
+    dataRef: oper-state:border:e1-11
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:border:e1-11:firewall:e1-11:
+    dataRef: border:e1-11:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  border:e1-12:firewall:e1-12:
+    dataRef: oper-state:border:e1-12
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:border:e1-12:firewall:e1-12:
+    dataRef: border:e1-12:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  border:e1-1:switch:e1-1:
+    dataRef: oper-state:border:e1-1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:border:e1-1:switch:e1-1:
+    dataRef: border:e1-1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  firewall:e1-11:border:e1-11:
+    dataRef: oper-state:firewall:e1-11
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:firewall:e1-11:border:e1-11:
+    dataRef: firewall:e1-11:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  firewall:e1-12:border:e1-12:
+    dataRef: oper-state:firewall:e1-12
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:firewall:e1-12:border:e1-12:
+    dataRef: firewall:e1-12:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  switch:e1-1:border:e1-1:
+    dataRef: oper-state:switch:e1-1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:switch:e1-1:border:e1-1:
+    dataRef: switch:e1-1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  switch:e1-2:campus:e1-1:
+    dataRef: oper-state:switch:e1-2
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:switch:e1-2:campus:e1-1:
+    dataRef: switch:e1-2:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  campus:e1-1:switch:e1-2:
+    dataRef: oper-state:campus:e1-1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:campus:e1-1:switch:e1-2:
+    dataRef: campus:e1-1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  campus:e1-13:host-03:eth1:
+    dataRef: oper-state:campus:e1-13
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:campus:e1-13:host-03:eth1:
+    dataRef: campus:e1-13:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  campus:e1-14:host-04:eth1:
+    dataRef: oper-state:campus:e1-14
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:campus:e1-14:host-04:eth1:
+    dataRef: campus:e1-14:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  host-01:eth1:extern:e1-1:
+    dataRef: oper-state:host-01:eth1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:host-01:eth1:extern:e1-1:
+    dataRef: host-01:eth1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  host-02:eth1:extern:e1-2:
+    dataRef: oper-state:host-02:eth1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:host-02:eth1:extern:e1-2:
+    dataRef: host-02:eth1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  host-03:eth1:campus:e1-13:
+    dataRef: oper-state:host-03:eth1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:host-03:eth1:campus:e1-13:
+    dataRef: host-03:eth1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
+  host-04:eth1:campus:e1-14:
+    dataRef: oper-state:host-04:eth1
+    fillColor:
+      thresholds: *thresholds-operstate
+  link_id:host-04:eth1:campus:e1-14:
+    dataRef: host-04:eth1:out
+    label: *label-config
+    strokeColor:
+      thresholds: *thresholds-traffic
